@@ -19,5 +19,5 @@ double Stopwatch::getTimeDifference(const std::string& token1, const std::string
     if (times.find(token1) == times.end() || times.find(token2) == times.end()) {
         return -1.0;
     }
-    return std::chrono::duration<double, std::micro>(times[token2] - times[token1]).count();
+    return std::chrono::duration<double, std::milli>(times[token2] - times[token1]).count();
 }
